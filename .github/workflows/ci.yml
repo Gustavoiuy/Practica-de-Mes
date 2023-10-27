@@ -1,0 +1,25 @@
+name: Pruebas de CI
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout código fuente
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14  # Elije la versión de Node.js que necesitas
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar pruebas
+      run: npm test
