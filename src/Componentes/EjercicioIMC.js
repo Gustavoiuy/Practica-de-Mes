@@ -65,3 +65,4 @@ export default function EjercicioIMC ()  {
     </div>
   );
 };
+module.exports = EjercicioIMC;
